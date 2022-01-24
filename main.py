@@ -6,7 +6,6 @@ from discord.utils import get
 import time
 from ro_py import Client
 import json
-import keep_alive
 import time
 import os
 
@@ -231,7 +230,5 @@ async def setRole(ctx, rbxName, rankId):
 @client.command()
 async def clear(ctx , amount=5):
   await ctx.channel.purge(limit=amount + 1)
-
-keep_alive.keep_alive()
 
 client.run(botToken)
